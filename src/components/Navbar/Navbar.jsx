@@ -46,7 +46,7 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="navbar-end ">
-            <a className="btn bg-[#0EA106] rounded-2xl hidden lg:flex">
+            <a className="btn bg-[#0EA106] text-white rounded-full hidden lg:flex">
               Contact Now
             </a>
           </div>
