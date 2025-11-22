@@ -5,7 +5,7 @@ import Services from '../components/Services/Services';
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2">
         <Hero />
         <Lawyers />
         <Services />

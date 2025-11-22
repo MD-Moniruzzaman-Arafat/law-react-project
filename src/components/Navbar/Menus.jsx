@@ -1,17 +1,19 @@
+import { Link } from 'react-router';
+
 export default function Menus() {
   return (
     <>
       <li>
-        <a>Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a>My-Bookings</a>
+        <Link to="/my-bookings">My-Bookings</Link>
       </li>
       <li>
-        <a>Blogs</a>
+        <Link to="/blogs">Blogs</Link>
       </li>
       <li>
-        <a>Contact Us</a>
+        <Link to="/contact-us">Contact Us</Link>
       </li>
     </>
   );

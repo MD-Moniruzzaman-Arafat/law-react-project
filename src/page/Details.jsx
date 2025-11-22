@@ -4,7 +4,7 @@ import Title from '../components/common/Title';
 
 export default function Details() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-2">
       <div className="border border-gray-300 rounded-lg p-6 my-10">
         <Title
           title={'Lawyer’s Profile Details'}
