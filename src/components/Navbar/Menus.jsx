@@ -1,13 +1,35 @@
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 export default function Menus() {
   return (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'active border-b rounded-b-none'
+              : ''
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/my-bookings">My-Bookings</Link>
+        <NavLink
+          to="/my-bookings"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'active border-b rounded-b-none'
+              : ''
+          }
+        >
+          My-Bookings
+        </NavLink>
       </li>
       <li>
         <Link to="/blogs">Blogs</Link>

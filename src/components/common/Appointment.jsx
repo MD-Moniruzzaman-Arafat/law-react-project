@@ -1,4 +1,6 @@
-export default function Appointment() {
+import { getAvailable } from '../../utility';
+
+export default function Appointment({ data }) {
   return (
     <>
       <div className="border border-gray-300 rounded-lg p-6 my-10">
@@ -9,11 +11,17 @@ export default function Appointment() {
           <span className="font-bold">
             <p>Availability</p>
           </span>
-          <span className="bg-[#e6f5ea] px-3 rounded-full">
-            <small className="text-[#09982f] font-semibold">
-              Lawyer Available Today
-            </small>
-          </span>
+          {getAvailable(data.availability) ? (
+            <span className="bg-[#e6f5ea] px-3 rounded-full">
+              <small className="text-[#09982f]">Lawyer Available Today</small>
+            </span>
+          ) : (
+            <span className="bg-[#fdecea] px-3 rounded-full">
+              <small className="text-[#d93025]">
+                Lawyer Not Available Today
+              </small>
+            </span>
+          )}
         </div>
         <div>
           <span>
@@ -22,9 +30,18 @@ export default function Appointment() {
               appointments for today only. We appreciate your understanding and
               cooperation.
             </small>
-            <button className="btn w-full bg-[#0EA106] text-white rounded-full mt-5">
-              Book Appointment Now
-            </button>
+            {getAvailable(data.availability) ? (
+              <button className="btn w-full bg-[#0EA106] text-white rounded-full mt-5">
+                Book Appointment Now
+              </button>
+            ) : (
+              <button
+                disabled
+                className="btn w-full bg-[#fdecea] text-[#d93025] rounded-full mt-5"
+              >
+                Book Appointment Later
+              </button>
+            )}
           </span>
         </div>
       </div>

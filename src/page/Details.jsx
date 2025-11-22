@@ -1,8 +1,11 @@
+import { useLoaderData } from 'react-router';
 import Appointment from '../components/common/Appointment';
 import DetailsCard from '../components/common/DetailsCard';
 import Title from '../components/common/Title';
 
 export default function Details() {
+  const data = useLoaderData();
+  console.log(data);
   return (
     <div className="container mx-auto px-2">
       <div className="border border-gray-300 rounded-lg p-6 my-10">
@@ -13,8 +16,8 @@ export default function Details() {
           }
         />
       </div>
-      <DetailsCard />
-      <Appointment />
+      <DetailsCard data={data} />
+      <Appointment data={data} />
     </div>
   );
 }

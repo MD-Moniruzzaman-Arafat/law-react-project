@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "image": "https://example.com/lawyer1.jpg",
+    "name": "Arafat Hasan",
+    "experience": "5 years",
+    "licenseNumber": "LIC-2001",
+    "speciality": "Criminal Law",
+    "fee": 1000,
+    "availability": ["monday", "wednesday", "friday"]
+  },
+  {
+    "id": 2,
+    "image": "https://example.com/lawyer2.jpg",
+    "name": "Tanvir Rahman",
+    "experience": "7 years",
+    "licenseNumber": "LIC-2002",
+    "speciality": "Corporate Law",
+    "fee": 1200,
+    "availability": ["tuesday", "thursday"]
+  },
+  {
+    "id": 3,
+    "image": "https://example.com/lawyer3.jpg",
+    "name": "Nadia Karim",
+    "experience": "3 years",
+    "licenseNumber": "LIC-2003",
+    "speciality": "Family Law",
+    "fee": 800,
+    "availability": ["monday", "saturday"]
+  },
+  {
+    "id": 4,
+    "image": "https://example.com/lawyer4.jpg",
+    "name": "Rohan Islam",
+    "experience": "10 years",
+    "licenseNumber": "LIC-2004",
+    "speciality": "Civil Litigation",
+    "fee": 1500,
+    "availability": ["wednesday", "thursday", "friday"]
+  },
+  {
+    "id": 5,
+    "image": "https://example.com/lawyer5.jpg",
+    "name": "Mehnaz Akter",
+    "experience": "4 years",
+    "licenseNumber": "LIC-2005",
+    "speciality": "Intellectual Property",
+    "fee": 1100,
+    "availability": ["tuesday", "friday"]
+  },
+  {
+    "id": 6,
+    "image": "https://example.com/lawyer6.jpg",
+    "name": "Rayhan Uddin",
+    "experience": "8 years",
+    "licenseNumber": "LIC-2006",
+    "speciality": "Immigration Law",
+    "fee": 900,
+    "availability": ["monday", "thursday", "saturday"]
+  },
+  {
+    "id": 7,
+    "image": "https://example.com/lawyer7.jpg",
+    "name": "Shaila Noor",
+    "experience": "6 years",
+    "licenseNumber": "LIC-2007",
+    "speciality": "Tax Law",
+    "fee": 950,
+    "availability": ["wednesday", "friday"]
+  },
+  {
+    "id": 8,
+    "image": "https://example.com/lawyer8.jpg",
+    "name": "Emon Chowdhury",
+    "experience": "9 years",
+    "licenseNumber": "LIC-2008",
+    "speciality": "Labor Law",
+    "fee": 1200,
+    "availability": ["tuesday", "thursday"]
+  },
+  {
+    "id": 9,
+    "image": "https://example.com/lawyer9.jpg",
+    "name": "Arifa Sultana",
+    "experience": "2 years",
+    "licenseNumber": "LIC-2009",
+    "speciality": "Environmental Law",
+    "fee": 700,
+    "availability": ["monday", "wednesday"]
+  },
+  {
+    "id": 10,
+    "image": "https://example.com/lawyer10.jpg",
+    "name": "Hemal Akon",
+    "experience": "11 years",
+    "licenseNumber": "LIC-2010",
+    "speciality": "Real Estate Law",
+    "fee": 1300,
+    "availability": ["friday", "saturday"]
+  },
+  {
+    "id": 11,
+    "image": "https://example.com/lawyer11.jpg",
+    "name": "Fariya Rahim",
+    "experience": "3 years",
+    "licenseNumber": "LIC-2011",
+    "speciality": "Contract Law",
+    "fee": 850,
+    "availability": ["monday", "thursday"]
+  },
+  {
+    "id": 12,
+    "image": "https://example.com/lawyer12.jpg",
+    "name": "Hridoy Khan",
+    "experience": "6 years",
+    "licenseNumber": "LIC-2012",
+    "speciality": "Corporate Compliance",
+    "fee": 950,
+    "availability": ["tuesday", "wednesday", "friday"]
+  }
+]

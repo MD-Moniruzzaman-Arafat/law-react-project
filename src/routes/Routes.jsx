@@ -10,7 +10,15 @@ const router = createBrowserRouter([
     Component: App,
     children: [
       { index: true, Component: Home },
-      { path: 'details', Component: Details },
+      {
+        path: 'details/:id',
+        Component: Details,
+        loader: async ({ params }) => {
+          const res = await fetch('/data.json');
+          const data = await res.json();
+          return data.find((lawyer) => lawyer.id === Number(params.id));
+        },
+      },
       { path: 'my-bookings', Component: Bookings },
     ],
   },

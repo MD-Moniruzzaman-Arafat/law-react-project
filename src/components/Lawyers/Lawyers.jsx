@@ -1,7 +1,15 @@
+import { useEffect, useState } from 'react';
 import Card from '../common/Card';
 import Title from '../common/Title';
 
 export default function Lawyers() {
+  const [lawyers, setLawyers] = useState([]);
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    fetch('data.json')
+      .then((res) => res.json())
+      .then((data) => setLawyers(data));
+  }, []);
   return (
     <div className="my-20 ">
       <Title
@@ -10,17 +18,28 @@ export default function Lawyers() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {!show
+          ? lawyers
+              .slice(0, 4)
+              .map((lawyer) => <Card key={lawyer.id} lawyer={lawyer} />)
+          : lawyers.map((lawyer) => <Card key={lawyer.id} lawyer={lawyer} />)}
       </div>
       <div className="text-center mt-10">
-        <button className="btn bg-[#0EA106] text-white rounded-full px-10">
-          Show All Lawyer
-        </button>
+        {!show ? (
+          <button
+            onClick={() => setShow(!show)}
+            className="btn bg-[#0EA106] text-white rounded-full px-10"
+          >
+            Show All Lawyer
+          </button>
+        ) : (
+          <button
+            onClick={() => setShow(!show)}
+            className="btn bg-[#0EA106] text-white rounded-full px-10"
+          >
+            Hide
+          </button>
+        )}
       </div>
     </div>
   );
