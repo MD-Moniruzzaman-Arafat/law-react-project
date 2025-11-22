@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import img from '../../assets/doctor-sample.png';
 
 export default function Card() {
@@ -25,9 +26,12 @@ export default function Card() {
           <p>
             <small className="flex items-center">License No: BD 12451254</small>
           </p>
-          <button className="btn btn-outline rounded-full text-primary">
+          <Link
+            to={'/details'}
+            className="btn btn-outline rounded-full text-primary"
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </>
