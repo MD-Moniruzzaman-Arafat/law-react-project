@@ -1,17 +1,71 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 # law-react-project
+
+# Lawyer Appointment Booking Application
+
+Welcome to the **Lawyer Appointment Booking Web App**! This React-based application allows users to browse lawyer profiles and schedule appointments with ease. The app includes multiple pages, interactive UI elements, charts, routing, and persistent data storage using `localStorage`.
+
+---
+
+## 📌 Key Features
+
+### Global Layout
+
+- Responsive Navbar visible on all pages (including 404 error page)
+- Footer visible on all pages except the error page
+- Site logo, name, navigation menu, and social media links
+
+### Homepage
+
+- Banner section with background image
+- Lawyer listing section:
+  - Shows 6 lawyers initially
+  - "Show All" button loads all 12 lawyer cards
+  - Lawyer Card includes: Image, Name, Speciality, Experience, License Number, and "View Details" button
+- Success stats section:
+  - 4 square cards with Icon, Number (animated with `react-countup`), and Title
+
+### Lawyer Details Page
+
+- Profile details header with slogan
+- Display lawyer image, name, experience, speciality, fee
+- Availability array with badges
+- Appointment card with:
+  - Availability badge
+  - "Book Now" button
+
+### Appointment Booking System
+
+- Prevents duplicate bookings
+- Success & error toast messages
+- Saves appointments to `localStorage` for persistence
+
+### Bookings Page
+
+- Displays all booked appointments in 1-column card layout
+- Each card shows Name, Fee, Speciality, and Cancel button
+- Canceling removes appointment from `localStorage`
+- Shows empty state message with Home button if no appointments exist
+
+### Error Page (404)
+
+- Custom-designed UI
+- Navbar visible, Footer hidden
+- Redirect button to Home page
+
+### Recharts Integration
+
+- Visualize appointment fees
+- Chart updates automatically when appointments are added or removed
+- Hidden when no appointments exist
+
+### Routing & Loading States
+
+- Loading animation on every route change
+- Fallback loader during data fetch
+- Handles invalid dynamic route IDs
+
+### Optional Enhancements
+
+- Validate booking based on lawyer availability
+- Display "Unavailable" badge if lawyer is not available today
+- Dynamic document title per route using `useLocation()`
