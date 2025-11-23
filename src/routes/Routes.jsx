@@ -20,6 +20,14 @@ const router = createBrowserRouter([
         },
       },
       { path: 'my-bookings', Component: Bookings },
+      {
+        path: '*',
+        element: (
+          <div className="text-center h-screen flex justify-center font-extrabold text-7xl items-center">
+            404 Not Found
+          </div>
+        ),
+      },
     ],
   },
 ]);
