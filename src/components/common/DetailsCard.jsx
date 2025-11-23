@@ -1,12 +1,11 @@
+import img from '../../assets/lawyer.png';
+
 export default function DetailsCard({ data }) {
   return (
     <>
       <div className="card lg:card-side bg-base-100 shadow-sm my-10 ">
         <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-            alt="Album"
-          />
+          <img src={img} alt="Album" />
         </figure>
         <div className="card-body justify-center">
           <div className="">

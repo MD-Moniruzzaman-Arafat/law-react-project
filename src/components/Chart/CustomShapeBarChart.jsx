@@ -1,6 +1,5 @@
 import { Bar, BarChart, CartesianGrid, Cell, XAxis, YAxis } from 'recharts';
-
-const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+import { getRandomColor } from '../../utility';
 
 // #region Sample data
 const data = [
@@ -72,7 +71,7 @@ const TriangleBar = (props) => {
   );
 };
 
-export default function CustomShapeBarChart() {
+export default function CustomShapeBarChart({ appointments }) {
   return (
     <BarChart
       style={{
@@ -82,7 +81,7 @@ export default function CustomShapeBarChart() {
         aspectRatio: 1.618,
       }}
       responsive
-      data={data}
+      data={appointments}
       margin={{
         top: 20,
         right: 0,
@@ -94,13 +93,13 @@ export default function CustomShapeBarChart() {
       <XAxis dataKey="name" />
       <YAxis width="auto" />
       <Bar
-        dataKey="uv"
+        dataKey="fee"
         fill="#8884d8"
         shape={TriangleBar}
         label={{ position: 'top' }}
       >
         {data.map((_entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+          <Cell key={`cell-${index}`} fill={getRandomColor()} />
         ))}
       </Bar>
     </BarChart>

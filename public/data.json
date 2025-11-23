@@ -57,7 +57,7 @@
     "licenseNumber": "LIC-2006",
     "speciality": "Immigration Law",
     "fee": 900,
-    "availability": ["monday", "thursday", "saturday"]
+    "availability": ["monday", "thursday", "sunday"]
   },
   {
     "id": 7,
@@ -77,7 +77,7 @@
     "licenseNumber": "LIC-2008",
     "speciality": "Labor Law",
     "fee": 1200,
-    "availability": ["tuesday", "thursday"]
+    "availability": ["sunday", "thursday"]
   },
   {
     "id": 9,
@@ -117,6 +117,6 @@
     "licenseNumber": "LIC-2012",
     "speciality": "Corporate Compliance",
     "fee": 950,
-    "availability": ["tuesday", "wednesday", "friday"]
+    "availability": ["sunday", "wednesday", "friday"]
   }
 ]
